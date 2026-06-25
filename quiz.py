@@ -282,16 +282,7 @@ else:
     # --- FRAGENKATALOG ---
     fragen = [
         {
-            "frage": "1. Wähle dein Starter-Team!",
-            "typ": "bilder",
-            "optionen": [
-                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Pikachu & Karnimani"},
-                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Enton & Gengar"},
-                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Pummeluff & Ditto"}
-            ]
-        },
-        {
-            "frage": "2. Stell dir vor, du dürftest ab heute nur noch eine einzige Art von Serie gucken. Wofür entscheidest du dich?",
+            "frage": "1. Stell dir vor, du dürftest ab heute nur noch eine einzige Art von Serie gucken. Wofür entscheidest du dich?",
             "typ": "text",
             "optionen": {
                 "Sitcoms wie 'Friends' oder 'The Office'": "Pop-Punk",
@@ -300,7 +291,7 @@ else:
             }
         },
         {
-            "frage": "3. Du stehst auf dem Volleyballfeld. Was beschreibt dich am besten?",
+            "frage": "2. Du stehst auf dem Volleyballfeld. Was beschreibt dich am besten?",
             "typ": "text",
             "optionen": {
                 "Am wichtigsten ist der Teamgeist und der Spaß mit der Mannschaft": "Pop-Punk",
@@ -309,7 +300,7 @@ else:
             }
         },
         {
-            "frage": "4. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Was passiert?",
+            "frage": "3. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Was passiert?",
             "typ": "text",
             "optionen": {
                 "Einer von uns atmet tief durch, nimmt den anderen bei der Hand und es wird versucht, uns gegenseitig zu beruhigen und das Beste daraus zu machen.": "Pop-Punk",
@@ -318,7 +309,7 @@ else:
             }
         },
         {
-            "frage": "5. Wir gehen heute Abend aus und du machst dich fertig. Wie sieht dieses Szenario typischerweise aus?",
+            "frage": "4. Wir gehen heute Abend aus und du machst dich fertig. Wie sieht dieses Szenario typischerweise aus?",
             "typ": "text",
             "optionen": {
                 "Meine Lieblings-Playlist läuft, ich singe vor dem Spiegel laut mit und probiere in Ruhe meine Outfits an.": "Pop-Punk",
@@ -327,7 +318,7 @@ else:
             }
         },
         {
-            "frage": "6. Ein komplett freier Tag nur für dich. Wie verbringst du ihn am liebsten?",
+            "frage": "5. Ein komplett freier Tag nur für dich. Wie verbringst du ihn am liebsten?",
             "typ": "text",
             "optionen": {
                 "Ich genieße die Zeit mit Freunden oder der Familie": "Pop-Punk",
@@ -336,13 +327,22 @@ else:
             }
         },
         {
-            "frage": "7. Wenn wir uns in ein Krimi-Ermittler-Duo verwandeln könnten – welches wären wir?",
+            "frage": "6. Wenn wir uns in ein Krimi-Ermittler-Duo verwandeln könnten – welches wären wir?",
             "typ": "text",
             "optionen": {
                 "Erica Falck & Patrik Hedström (Läckberg)": "Pop-Punk",
                 "Pia Sander & Oliver von Bodenstein (Neuhaus)": "Electro",
                 "Ann Kathrin Klaasen & Frank Weller (Wolf)": "Comedy"
             }
+        },
+        {
+            "frage": "7. Wähle dein Starter-Team!",
+            "typ": "bilder",
+            "optionen": [
+                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Pikachu & Karnimani"},
+                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Enton & Gengar"},
+                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Pummeluff & Ditto"}
+            ]
         },
         {
             "frage": "8. Was bedeutet dir deine Heimat in Dorum mit einem - damalig noch in Betrieb laufenden - Bauernhof mit der Nähe zur Küste für dich?",
