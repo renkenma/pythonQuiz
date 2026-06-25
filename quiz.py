@@ -18,7 +18,7 @@ if not st.session_state.quiz_started:
     st.title("🎁 Alles Gute zum Geburtstag!")
     
     st.markdown("""
-    **Hey mein Schatz** 😊 Ich wünsche dir zum Geburtstag nur das Beste der Welt und dass all' deine Wünsche in Erfüllung gehen! 😊 Bei einigen spiele ich hoffentlich die Hauptrolle ❤️. 
+    **Hey mein Schatz** 😊 Ich wünsche dir zum Geburtstag nur das Beste der Welt und dass all' deine Wünsche in Erfüllung gehen! 😊 Bei einigen dieser Wünsche spiele ich hoffentlich die Hauptrolle ❤️. 
     
     Ich will dir natürlich soviel bieten wie möglich! Allerdings haben wir uns ein Limit bei den Geschenken gesetzt 😔. Daher kann ich dich nicht zu allem einladen, woran ich so gedacht habe. Aber ich will ja nicht, dass du nach Lust und Laune entscheidest! 
     
