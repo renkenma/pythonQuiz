@@ -82,7 +82,16 @@ else:
             }
         },
         {
-            "frage": "3. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Was passiert?",
+            "frage": "3. Welches dieser Artworks gefällt dir am besten?",
+            "typ": "bilder",
+            "optionen": [
+                {"bild": "schiggy.png", "eigenschaft": "Electro", "label": "Schiggy"},
+                {"bild": "bisasam.png", "eigenschaft": "Comedy", "label": "Bisasam"},
+                {"bild": "glumanda.png", "eigenschaft": "Pop-Punk", "label": "Glumanda"}
+            ]
+        },
+        {
+            "frage": "4. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Was passiert?",
             "typ": "text",
             "optionen": {
                 "Augen zu und durch! Die Hitze wird ignoriert, die Energie oben gehalten und es wird zielstrebig weitergelaufen, bis wir da sind.": "Electro",
@@ -91,7 +100,7 @@ else:
             }
         },
         {
-            "frage": "4. Wir gehen heute Abend aus und du machst dich fertig. Wie sieht dieses Szenario typischerweise aus?",
+            "frage": "5. Wir gehen heute Abend aus und du machst dich fertig. Wie sieht dieses Szenario typischerweise aus?",
             "typ": "text",
             "optionen": {
                 "Die Musik wird aufgedreht, um richtig in Stimmung zu kommen und es wird hier bereits getanzt.": "Electro",
@@ -100,7 +109,7 @@ else:
             }
         },
         {
-            "frage": "5. Ein komplett freier Tag nur für dich. Wie verbringst du ihn am liebsten?",
+            "frage": "3. Ein komplett freier Tag nur für dich. Wie verbringst du ihn am liebsten?",
             "typ": "text",
             "optionen": {
                 "Ich genieße die Zeit mit Freunden oder der Familie": "Pop-Punk",
@@ -109,7 +118,7 @@ else:
             }
         },
         {
-            "frage": "6. Wenn wir uns in ein Krimi-Ermittler-Duo verwandeln könnten – welches wären wir?",
+            "frage": "7. Wenn wir uns in ein Krimi-Ermittler-Duo verwandeln könnten – welches wären wir?",
             "typ": "text",
             "optionen": {
                 "Erica Falck & Patrik Hedström (Läckberg)": "Pop-Punk",
@@ -118,16 +127,16 @@ else:
             }
         },
         {
-            "frage": "7. Was wäre dein Pokemon-Duo?",
+            "frage": "8. Über wen kannst du am meisten lachen?",
             "typ": "bilder",
             "optionen": [
-                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Pikachu & Karnimani"},
-                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Enton & Gengar"},
-                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Pummeluff & Ditto"}
+                {"bild": "calvinMarvinKleinen.png", "eigenschaft": "Electro", "label": "Calvin & Marvin Kleinen"},
+                {"bild": "bjoern.png", "eigenschaft": "Comedy", "label": "Björn von Morgenstern"},
+                {"bild": "peterRuetten.png", "eigenschaft": "Pop-Punk", "label": "Peter Rütten"}
             ]
         },
         {
-            "frage": "8. Was bedeutet dir deine Heimat in Dorum mit einem - damalig noch in Betrieb laufenden - Bauernhof mit der Nähe zur Küste für dich?",
+            "frage": "9. Was bedeutet dir deine Heimat in Dorum mit einem - damalig noch in Betrieb laufenden - Bauernhof mit der Nähe zur Küste für dich?",
             "typ": "text",
             "optionen": {
                 "Meine Familie ist das, was es zu meiner Heimat macht. Die Nähe zur Nordsee und der Bauernhof sind das i-Tüpfelchen oben drauf": "Pop-Punk",
@@ -136,7 +145,7 @@ else:
             }
         },
         {
-            "frage": "9. Ganz ehrlich: Was schätzt du an mir am meisten?",
+            "frage": "10. Ganz ehrlich: Was schätzt du an mir am meisten?",
             "typ": "text",
             "optionen": {
                 "Dass ich mich so schnell und leidenschaftlich für neue Dinge begeistern kann": "Pop-Punk",
@@ -145,7 +154,7 @@ else:
             }
         },
         {
-            "frage": "10. Wir verkaufen was bei Kleinanzeigen. Jemand nervt total – wie reagierst du?",
+            "frage": "11. Wir verkaufen was bei Kleinanzeigen. Jemand nervt total – wie reagierst du?",
             "typ": "text",
             "optionen": {
                 "Ich antworte selbst in einem lustig-frechen Ton und mache mir einen Spaß daraus": "Comedy",
@@ -154,7 +163,7 @@ else:
             }
         },
         {
-            "frage": "11. Wir machen einen langen Roadtrip ans Meer. Was beschreibt dich am besten?",
+            "frage": "12. Wir machen einen langen Roadtrip ans Meer. Was beschreibt dich am besten?",
             "typ": "text",
             "optionen": {
                 "Ich mache die Musik! Ich sorge für die passenden Playlists und Podcasts als perfekte Wegbegleitung": "Pop-Punk",
@@ -163,7 +172,16 @@ else:
             }
         },
         {
-            "frage": "12. Ein geplanter Abend mit anderen fällt spontan ins Wasser, weil alle absagen. Wie reagierst du?",
+            "frage": "13. Was wäre dein Pokemon-Duo?",
+            "typ": "bilder",
+            "optionen": [
+                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Pikachu & Karnimani"},
+                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Enton & Gengar"},
+                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Pummeluff & Ditto"}
+            ]
+        },
+        {
+            "frage": "14. Ein geplanter Abend mit anderen fällt spontan ins Wasser, weil alle absagen. Wie reagierst du?",
             "typ": "text",
             "optionen": {
                 "Dann telefoniere ich mit jemandem und/oder gehe spazieren": "Pop-Punk",
@@ -172,31 +190,13 @@ else:
             }
         },
         {
-            "frage": "13. Ich fange an, dir völlig ungefragt einen ewig langen Monolog über Yu-Gi-Oh oder Pokemon zu halten. Was passiert in dir?",
+            "frage": "15. Ich fange an, dir völlig ungefragt einen ewig langen Monolog über Yu-Gi-Oh oder Pokemon zu halten. Was passiert in dir?",
             "typ": "text",
             "optionen": {
                 "Ich finde es schön, dass es dich so interessiert. Auch wenn ich nur die Hälfte verstehe, höre ich dir gerne zu, weil du dich darüber freust": "Pop-Punk",
                 "Ich versuche wirklich etwas zu verstehen. Ich stelle Rückfragen und will wissen, worum es genau geht bzw. warum es dich so interessiert": "Electro",
                 "Ich lächel leicht und führe mit dir eine Konversation darüber, aber eigentlich interessiert mich das Abendessen gerade mehr": "Comedy"
             }
-        },
-        {
-            "frage": "14. Über wen kannst du am meisten lachen?",
-            "typ": "bilder",
-            "optionen": [
-                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Calvin & Marvin Kleinen"},
-                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Björn von Morgenstern"},
-                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Peter Rütten"}
-            ]
-        },
-        {
-            "frage": "15. Welches dieser Artworks gefällt dir am besten?",
-            "typ": "bilder",
-            "optionen": [
-                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Schiggy"},
-                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Bisasam"},
-                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Glumanda"}
-            ]
         },
     ]
 
