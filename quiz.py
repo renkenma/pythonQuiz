@@ -178,7 +178,21 @@ else:
 
     # --- ERGEBNIS-ANZEIGE ---
     else:
-        st.success("🎉 Du hast alle Fragen beantwortet! Hier ist dein Ergebnis:")
+        st.success("🎉 Du hast alle Fragen beantwortet!")
+
+        # Scores sortieren, um die höchsten Werte zu vergleichen
+        sorted_scores = sorted(st.session_state.scores.values(), reverse=True)
+        
+        # Prüfung: Sind die beiden höchsten Werte gleich?
+        # sorted_scores[0] ist der erste, sorted_scores[1] der zweite
+        if sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
+            st.warning("Oh, ein Kopf-an-Kopf-Rennen! Du bist eine Mischung aus zwei Typen.")
+            # Hier kannst du definieren, was genau bei einem Unentschieden passieren soll
+        else:
+            # Dein bisheriger Code für einen eindeutigen Sieger
+            sieger = max(st.session_state.scores, key=st.session_state.scores.get)
+            st.success(f"Dein Ergebnis ist: {sieger}")
+
         
         sieger = max(st.session_state.scores, key=st.session_state.scores.get)
         
