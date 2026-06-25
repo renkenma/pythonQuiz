@@ -4,14 +4,30 @@ import pandas as pd
 # Seiten-Setup
 st.set_page_config(page_title="Charakter-Quiz", page_icon="🎁", layout="centered")
 
-st.title("🎁 Welches Geschenk passt zu dir?")
-st.write("Finde heraus, welcher Typ du bist. Je nachdem, wie du antwortest, wachsen die Säulen live mit!")
+# --- SESSION STATE INITIALISIEREN ---
+# Wir speichern die aktuelle Frage und die Punkte dauerhaft für diese Sitzung
+if 'aktuelle_frage' not in st.session_state:
+    st.session_state.aktuelle_frage = 0
+    st.session_state.scores = {"Entspannung": 0, "Action": 0, "Neugier": 0}
 
-# Platzhalter für das Diagramm erstellen (damit es ganz oben steht, aber erst später gefüllt wird)
-chart_placeholder = st.empty()
+st.title("🎁 Welches Geschenk passt zu dir?")
+
+# --- DIAGRAMM ZEICHNEN ---
+# Das Diagramm wird immer aus dem aktuellen Session-State generiert
+df = pd.DataFrame({
+    "Kategorie": ["Entspannung", "Action", "Neugier"],
+    "Punkte": [
+        st.session_state.scores["Entspannung"], 
+        st.session_state.scores["Action"], 
+        st.session_state.scores["Neugier"]
+    ]
+}).set_index("Kategorie")
+
+# Säulendiagramm anzeigen
+st.bar_chart(df, color=["#1f77b4"])
+st.divider()
 
 # --- FRAGENKATALOG ---
-# Jede Antwort ist fest einer der drei Kategorien zugeordnet.
 fragen = [
     {
         "frage": "1. Wie verbringst du dein perfektes Wochenende?",
@@ -95,57 +111,51 @@ fragen = [
     }
 ]
 
-# --- PUNKTE ZÄHLEN ---
-scores = {"Entspannung": 0, "Action": 0, "Neugier": 0}
-beantwortet = 0
+# --- LOGIK FÜR FRAGEN & AUSWERTUNG ---
 
-st.divider()
-
-# Schleife, die alle Fragen anzeigt
-for i, q in enumerate(fragen):
-    # index=None bewirkt, dass am Anfang kein Punkt ausgewählt ist
-    auswahl = st.radio(q["frage"], list(q["optionen"].keys()), index=None, key=f"frage_{i}")
+# Prüfen, ob noch Fragen übrig sind
+if st.session_state.aktuelle_frage < len(fragen):
+    # Aktuelle Frage holen
+    q = fragen[st.session_state.aktuelle_frage]
     
-    if auswahl:
-        # Eigenschaft zur ausgewählten Antwort herausfinden
-        eigenschaft = q["optionen"][auswahl]
-        scores[eigenschaft] += 1
-        beantwortet += 1
+    st.subheader(q["frage"])
+    
+    # Für jede Antwortmöglichkeit einen Button erstellen
+    for antwort_text, eigenschaft in q["optionen"].items():
+        # Wenn der Button geklickt wird:
+        if st.button(antwort_text, use_container_width=True):
+            # 1. Punkt zur jeweiligen Eigenschaft addieren
+            st.session_state.scores[eigenschaft] += 1
+            # 2. Zur nächsten Frage springen
+            st.session_state.aktuelle_frage += 1
+            # 3. Seite sofort neu laden, um Änderung anzuzeigen
+            st.rerun()
 
-st.divider()
-
-# --- DIAGRAMM ZEICHNEN ---
-# Hier übergeben wir die gezählten Punkte an das Diagramm oben auf der Seite
-df = pd.DataFrame({
-    "Kategorie": ["Entspannung", "Action", "Neugier"],
-    "Punkte": [scores["Entspannung"], scores["Action"], scores["Neugier"]]
-}).set_index("Kategorie")
-
-# st.bar_chart zeichnet die Säulen
-chart_placeholder.bar_chart(df, color=["#1f77b4"]) 
-
-
-# --- AUSWERTUNG & GESCHENK ---
-if beantwortet == len(fragen):
+else:
+    # Alle Fragen wurden beantwortet -> Auswertung!
     st.success("🎉 Du hast alle Fragen beantwortet! Hier ist dein Ergebnis:")
     
-    # Finde die Eigenschaft mit den meisten Punkten
-    sieger = max(scores, key=scores.get)
+    # Finde die Eigenschaft mit den meisten Punkten im Session State
+    sieger = max(st.session_state.scores, key=st.session_state.scores.get)
     
     if sieger == "Entspannung":
         st.markdown("### 💆‍♀️ Dein Geschenk: Das Spa-Paket!")
         st.info("Du liebst die Ruhe! Du bekommst eine flauschige Decke, Premium-Badebomben, Duftkerzen und einen Gutschein für eine Massage.")
-        st.balloons() # Lässt Ballons über den Bildschirm fliegen
+        st.balloons()
         
     elif sieger == "Action":
         st.markdown("### 🪂 Dein Geschenk: Das Adrenalin-Paket!")
         st.error("Du brauchst Nervenkitzel! Dein Geschenk ist ein Gutschein für einen Bungee-Sprung (oder Lasertag) und eine GoPro für deine nächsten Abenteuer.")
-        st.snow() # Lässt passend zu Action Schnee/Konfetti regnen
+        st.snow()
         
     else:
         st.markdown("### 🕵️‍♂️ Dein Geschenk: Das Entdecker-Paket!")
         st.warning("Dein Kopf braucht Futter! Du bekommst ein geniales Escape-Room-Brettspiel, ein kniffliges 3D-Puzzle und ein Ticket für ein interaktives Museum.")
         st.balloons()
-
-else:
-    st.info(f"Es fehlen noch {len(fragen) - beantwortet} Fragen bis zu deinem Geschenk.")
+    
+    st.divider()
+    
+    # Optional: Ein Button, um das Quiz neu zu starten
+    if st.button("🔄 Quiz neu starten"):
+        st.session_state.clear()
+        st.rerun()
