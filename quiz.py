@@ -192,12 +192,6 @@ else:
             # Dein bisheriger Code für einen eindeutigen Sieger
             sieger = max(st.session_state.scores, key=st.session_state.scores.get)
             st.success(f"Dein Ergebnis ist: {sieger}")
-
-else:
-    # Hier dein normaler Ergebnis-Block (der max-Sieger)
-    sieger = max(st.session_state.scores, key=st.session_state.scores.get)
-    st.success(f"Dein Ergebnis ist: {sieger}")
-
         
         sieger = max(st.session_state.scores, key=st.session_state.scores.get)
         
