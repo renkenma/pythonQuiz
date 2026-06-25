@@ -20,7 +20,7 @@ if not st.session_state.quiz_started:
     st.markdown("""
     **Hey mein Schatz** 😊 Ich wünsche dir zum Geburtstag nur das Beste der Welt und dass all' deine Wünsche in Erfüllung gehen! 😊 Bei einigen dieser Wünsche spiele ich hoffentlich die Hauptrolle ❤️. 
     
-    Ich will dir natürlich soviel bieten wie möglich! Allerdings haben wir uns ein Limit bei den Geschenken gesetzt 😔. Daher kann ich dich nicht zu allem einladen, woran ich so gedacht habe. Aber ich will ja nicht, dass du nach Lust und Laune entscheidest! 
+    Ich will dir natürlich soviel bieten wie möglich! Allerdings haben wir uns ein Limit bei den Geschenken gesetzt. Daher kann ich dich nicht zu allem einladen, woran ich so gedacht habe 😔. Daher reduziert sich der Spaß auf ein Drittel. Aber ich will ja auch nicht, dass du nach Lust und Laune entscheidest! 
     
     Wie wäre es, wenn wir das machen, was am besten zu dir passt? Dir werden hier keine expliziten Erlebnisse vorgeschlagen. Stattdessen habe ich ein kleines Quiz für dich organisiert, das deinen Charakter prüft. 
     
