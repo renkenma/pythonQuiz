@@ -180,37 +180,18 @@ else:
     else:
         st.success("🎉 Du hast alle Fragen beantwortet!")
 
-        # 1. Vorbereitung im Session State (am Anfang deines Skripts)
-        if 'tie_breaker_active' not in st.session_state:
-            st.session_state.tie_breaker_active = False
-
-        # 2. Deine bisherige Auswertung an der Stelle, wo das Ergebnis kommen soll
+        # Scores sortieren, um die höchsten Werte zu vergleichen
         sorted_scores = sorted(st.session_state.scores.values(), reverse=True)
-
-        # Prüfung auf Unentschieden
-        if not st.session_state.tie_breaker_active and sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
-            st.session_state.tie_breaker_active = True
-            st.rerun() # Seite neu laden, um die Tie-Breaker-Frage anzuzeigen
-
-        if st.session_state.tie_breaker_active:
-            st.subheader("Ein Kopf-an-Kopf-Rennen!")
-            st.write("Um das Ergebnis zu entscheiden: Welche der 10 Fragen war für dich am wichtigsten?")
-    
-            # Auswahl der entscheidenden Frage
-            wahl = st.selectbox("Wähle die entscheidende Frage aus:", range(1, 11))
-    
-            if st.button("Gewichtung anpassen"):
-                # Hier holst du dir die Antwort, die bei dieser Frage gegeben wurde
-                # Du musst deine Antworten/Scores so speichern, dass du sie über den Index abrufen kannst
-                # Beispiel: st.session_state.antworten_historie[wahl-1]
         
-                # Neue Gewichtung: Wir erhöhen den Score des gewählten Typs dieser Frage
-                gewählter_typ = st.session_state.antworten_historie[wahl-1]
-                st.session_state.scores[gewählter_typ] += 1
-        
-                # Modus beenden und Ergebnis neu berechnen
-                st.session_state.tie_breaker_active = False
-                st.rerun()
+        # Prüfung: Sind die beiden höchsten Werte gleich?
+        # sorted_scores[0] ist der erste, sorted_scores[1] der zweite
+        if sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
+            st.warning("Oh, ein Kopf-an-Kopf-Rennen! Du bist eine Mischung aus zwei Typen.")
+            # Hier kannst du definieren, was genau bei einem Unentschieden passieren soll
+        else:
+            # Dein bisheriger Code für einen eindeutigen Sieger
+            sieger = max(st.session_state.scores, key=st.session_state.scores.get)
+            st.success(f"Dein Ergebnis ist: {sieger}")
 
 else:
     # Hier dein normaler Ergebnis-Block (der max-Sieger)
