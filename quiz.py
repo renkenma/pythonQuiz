@@ -235,7 +235,6 @@ else:
             st.success("🎉 Du hast alle Fragen beantwortet!")
 
             sieger = max(st.session_state.scores, key=st.session_state.scores.get)
-            st.success(f"Dein Ergebnis ist: {sieger}")
 
             if sieger == "Pop-Punk":
                 st.bar_chart(df, color=["#ff4b4b"])
