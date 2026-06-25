@@ -68,9 +68,45 @@ else:
             "frage": "2. Stell dir vor, du dürftest ab heute nur noch eine einzige Art von Serie bingen. Wofür entscheidest du dich?",
             "typ": "text",
             "optionen": {
-                "Wohlfühl-Sitcoms wie 'Friends' oder 'The Office' – man lacht, weint und fühlt einfach mit!": "Pop-Punk",
-                "Action-Game-Shows wie die 'Beast Games' – pure Energie, Wettkampf und Spannung!": "Electro",
-                "Herrliches Trash-TV – einfach Kopf aus, drüber aufregen und pausenlos lachen!": "Comedy"
+                "Sitcoms wie 'Friends' oder 'The Office' – Spaß & Mitgefühl": "Pop-Punk",
+                "Action-Game-Shows wie die 'Beast Games' oder 'Crash Games' – Energie & Spannung": "Electro",
+                "Trash-TV wie 'Temptation Island' & 'Are you the one?' – Humor & Absurdität": "Comedy"
+            }
+        },
+        {
+            "frage": "3. Du stehst auf dem Volleyballfeld. Was beschreibt dich am besten?",
+            "typ": "text",
+            "optionen": {
+                "Am wichtigsten ist der Teamgeist und der Spaß mit der Mannschaft": "Pop-Punk",
+                "Ich bin motiviert, gebe auf dem Feld alles und will das Spiel unbedingt gewinnen": "Electro",
+                "Ich verhaue einen Ball, über den am Ende mit allen gelacht wird": "Comedy"
+            }
+        },
+        {
+            "frage": "4. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Wie reagierst du?",
+            "typ": "text",
+            "optionen": {
+                "Ich atme tief durch, nehme deine Hand und wir versuchen, uns gegenseitig zu beruhigen und das Beste daraus zu machen.": "Pop-Punk",
+                "Augen zu und durch! Die Hitze wird ignoriert, die Energie oben gehalten und es wird zielstrebig weitergelaufen, bis wir da sind.": "Electro",
+                "Ich bin erst super gestresst, aber spätestens am Abend im Hotel lachen wir uns über dieses komplette Chaos einfach nur kaputt.": "Comedy"
+            }
+        },
+        {
+            "frage": "5. Wir gehen heute Abend aus und du machst dich fertig. Wie sieht dieses Szenario typischerweise aus?",
+            "typ": "text",
+            "optionen": {
+                "Meine Lieblings-Playlist läuft, ich singe vor dem Spiegel laut mit und probiere in Ruhe meine Outfits an.": "Pop-Punk",
+                "Die Musik wird aufgedreht, um richtig in Stimmung zu kommen und es wird hier bereits getanzt.": "Electro",
+                "Ich ziehe fünf Sachen an, werfe alles aufs Bett und nehme am Ende doch das erste Outfit.": "Comedy"
+            }
+        },
+        {
+            "frage": "6. Ein komplett freier Tag nur für dich. Wie verbringst du ihn am liebsten?",
+            "typ": "text",
+            "optionen": {
+                "Ich genieße die Zeit mit Freunden oder der Familie": "Pop-Punk",
+                "Am liebsten an den See und am noch liebsten davor noch eine Runde wandern": "Electro",
+                "Abwechselnd einen spannenden Krimi lesen und Nintendogs spielen": "Comedy"
             }
         }
     ]
