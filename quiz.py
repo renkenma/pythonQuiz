@@ -65,84 +65,12 @@ else:
             ]
         },
         {
-            "frage": "2. Dein perfektes Outfit fürs Ausgehen besteht aus...",
+            "frage": "2. Stell dir vor, du dürftest ab heute nur noch eine einzige Art von Serie bingen. Wofür entscheidest du dich?",
             "typ": "text",
             "optionen": {
-                "...Bandshirt, Jeans und Chucks (oder Doc Martens).": "Pop-Punk",
-                "...Glitzer, bunten Farben und dem perfekten Festival-Look.": "Electro",
-                "...etwas Bequemem, aber Schickem. Hauptsache man kann gut sitzen.": "Comedy"
-            }
-        },
-        {
-            "frage": "3. Was läuft auf dem Roadtrip dorthin im Radio?",
-            "typ": "text",
-            "optionen": {
-                "Gitarren-Riffs und melancholische, aber laute Refrains.": "Pop-Punk",
-                "Ein treibendes Set mit ordentlich BPM.": "Electro",
-                "Ich höre lieber einen unterhaltsamen Podcast.": "Comedy"
-            }
-        },
-        {
-            "frage": "4. Welches Getränk hast du an einem perfekten Abend in der Hand?",
-            "typ": "text",
-            "optionen": {
-                "Ein kühles Bierchen beim Pogen in der Menge.": "Pop-Punk",
-                "Einen bunten Cocktail oder Energy-Drink für die Ausdauer.": "Electro",
-                "Ein Glas Wein oder ein gezapftes Bier gemütlich am Tisch.": "Comedy"
-            }
-        },
-        {
-            "frage": "5. Was ist deine heimliche Superkraft?",
-            "typ": "text",
-            "optionen": {
-                "Ich kenne alle Eras von Taylor Swift auswendig.": "Pop-Punk",
-                "Ich kann 12 Stunden am Stück raven.": "Electro",
-                "Ich habe für jede Situation den perfekten dummen Spruch.": "Comedy"
-            }
-        },
-        {
-            "frage": "6. Wie sieht die ideale Location für dich aus?",
-            "typ": "text",
-            "optionen": {
-                "Ein schwitziger Club oder ein cooler Konzertsaal.": "Pop-Punk",
-                "Open-Air mit Lasershow, Sand oder Wiese unter den Füßen.": "Electro",
-                "Ein uriges Theater, ein Café oder eine kleine Bühne.": "Comedy"
-            }
-        },
-        {
-            "frage": "7. Was machst du, wenn jemand auf der Bühne einen Fehler macht?",
-            "typ": "text",
-            "optionen": {
-                "Egal, das macht es erst authentisch!": "Pop-Punk",
-                "Fällt beim nächsten Bass-Drop eh nicht auf.": "Electro",
-                "Ich hoffe, da kommt direkt ein spontaner Witz drüber!": "Comedy"
-            }
-        },
-        {
-            "frage": "8. Wie beendest du einen legendären Abend?",
-            "typ": "text",
-            "optionen": {
-                "Heiser vom vielen Schreien und Singen auf dem Heimweg.": "Pop-Punk",
-                "Den Sonnenaufgang beobachten, weil die Party noch lief.": "Electro",
-                "Mit Bauchmuskelkater vom Lachen ins Bett fallen.": "Comedy"
-            }
-        },
-        {
-            "frage": "9. Wofür gibst du vor Ort am ehesten Geld aus?",
-            "typ": "text",
-            "optionen": {
-                "Merch! Ich brauche ein Shirt zur Erinnerung.": "Pop-Punk",
-                "Für Foodtrucks und leuchtende Accessoires.": "Electro",
-                "Für Snacks und Nachschub an guten Drinks am Platz.": "Comedy"
-            }
-        },
-        {
-            "frage": "10. Welches Emoji nutzt du am meisten?",
-            "typ": "text",
-            "optionen": {
-                "🎸 oder 💔": "Pop-Punk",
-                "⚡ oder 🕺": "Electro",
-                "😂 oder 🎤": "Comedy"
+                "Wohlfühl-Sitcoms wie 'Friends' oder 'The Office' – man lacht, weint und fühlt einfach mit!": "Pop-Punk",
+                "Action-Game-Shows wie die 'Beast Games' – pure Energie, Wettkampf und Spannung!": "Electro",
+                "Herrliches Trash-TV – einfach Kopf aus, drüber aufregen und pausenlos lachen!": "Comedy"
             }
         }
     ]
