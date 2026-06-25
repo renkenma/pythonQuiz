@@ -181,36 +181,36 @@ else:
         st.success("🎉 Du hast alle Fragen beantwortet!")
 
         # 1. Vorbereitung im Session State (am Anfang deines Skripts)
-if 'tie_breaker_active' not in st.session_state:
-    st.session_state.tie_breaker_active = False
+        if 'tie_breaker_active' not in st.session_state:
+            st.session_state.tie_breaker_active = False
 
-# 2. Deine bisherige Auswertung an der Stelle, wo das Ergebnis kommen soll
-sorted_scores = sorted(st.session_state.scores.values(), reverse=True)
+        # 2. Deine bisherige Auswertung an der Stelle, wo das Ergebnis kommen soll
+        sorted_scores = sorted(st.session_state.scores.values(), reverse=True)
 
-# Prüfung auf Unentschieden
-if not st.session_state.tie_breaker_active and sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
-    st.session_state.tie_breaker_active = True
-    st.rerun() # Seite neu laden, um die Tie-Breaker-Frage anzuzeigen
+        # Prüfung auf Unentschieden
+        if not st.session_state.tie_breaker_active and sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
+            st.session_state.tie_breaker_active = True
+            st.rerun() # Seite neu laden, um die Tie-Breaker-Frage anzuzeigen
 
-if st.session_state.tie_breaker_active:
-    st.subheader("Ein Kopf-an-Kopf-Rennen!")
-    st.write("Um das Ergebnis zu entscheiden: Welche der 10 Fragen war für dich am wichtigsten?")
+        if st.session_state.tie_breaker_active:
+            st.subheader("Ein Kopf-an-Kopf-Rennen!")
+            st.write("Um das Ergebnis zu entscheiden: Welche der 10 Fragen war für dich am wichtigsten?")
     
-    # Auswahl der entscheidenden Frage
-    wahl = st.selectbox("Wähle die entscheidende Frage aus:", range(1, 11))
+            # Auswahl der entscheidenden Frage
+            wahl = st.selectbox("Wähle die entscheidende Frage aus:", range(1, 11))
     
-    if st.button("Gewichtung anpassen"):
-        # Hier holst du dir die Antwort, die bei dieser Frage gegeben wurde
-        # Du musst deine Antworten/Scores so speichern, dass du sie über den Index abrufen kannst
-        # Beispiel: st.session_state.antworten_historie[wahl-1]
+            if st.button("Gewichtung anpassen"):
+                # Hier holst du dir die Antwort, die bei dieser Frage gegeben wurde
+                # Du musst deine Antworten/Scores so speichern, dass du sie über den Index abrufen kannst
+                # Beispiel: st.session_state.antworten_historie[wahl-1]
         
-        # Neue Gewichtung: Wir erhöhen den Score des gewählten Typs dieser Frage
-        gewählter_typ = st.session_state.antworten_historie[wahl-1]
-        st.session_state.scores[gewählter_typ] += 1
+                # Neue Gewichtung: Wir erhöhen den Score des gewählten Typs dieser Frage
+                gewählter_typ = st.session_state.antworten_historie[wahl-1]
+                st.session_state.scores[gewählter_typ] += 1
         
-        # Modus beenden und Ergebnis neu berechnen
-        st.session_state.tie_breaker_active = False
-        st.rerun()
+                # Modus beenden und Ergebnis neu berechnen
+                st.session_state.tie_breaker_active = False
+                st.rerun()
 
 else:
     # Hier dein normaler Ergebnis-Block (der max-Sieger)
