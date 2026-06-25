@@ -118,7 +118,7 @@ else:
             }
         },
         {
-            "frage": "7. Wähle dein Starter-Team!",
+            "frage": "7. Was wäre dein Pokemon-Duo?",
             "typ": "bilder",
             "optionen": [
                 {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Pikachu & Karnimani"},
@@ -151,9 +151,52 @@ else:
                 "Ich antworte selbst in einem lustig-frechen Ton und mache mir einen Spaß daraus": "Comedy",
                 "Ich bin etwas angefresse und überlege, ob ich gar nicht antworte oder dieser Person die Leviten lese": "Electro",
                 "Ich versuche das Gute in dieser Person zu sehen und versuche freundlich ein vernünftiges Gespräch zu führen": "Pop-Punk"
-                
-                
             }
+        },
+        {
+            "frage": "11. Wir machen einen langen Roadtrip ans Meer. Was beschreibt dich am besten?",
+            "typ": "text",
+            "optionen": {
+                "Ich mache die Musik! Ich sorge für die passenden Playlists und Podcasts als perfekte Wegbegleitung": "Pop-Punk",
+                "Ich passe auf, dass niemand einschläft und bleibe mit wach, damit alle sicher ankommen": "Electro",
+                "Ich bin für die Snacks zuständig, entspanne dabei schön und sehe zu, dass meine Füße nicht zu sehr riechen, wenn ich die Schuhe ausziehe": "Comedy"
+            }
+        },
+        {
+            "frage": "12. Ein geplanter Abend mit anderen fällt spontan ins Wasser, weil alle absagen. Wie reagierst du?",
+            "typ": "text",
+            "optionen": {
+                "Dann telefoniere ich mit jemandem und/oder gehe spazieren": "Pop-Punk",
+                "Ich nutze die Energie, mache ein Sport und freue mich ein wenig auspowern zu können": "Electro",
+                "Ich schlüpfe sofort in die Jogginghose, ab auf die Couch und freue mich, dass ich das Haus doch nicht verlassen muss": "Comedy"
+            }
+        },
+        {
+            "frage": "13. Ich fange an, dir völlig ungefragt einen ewig langen Monolog über Yu-Gi-Oh oder Pokemon zu halten. Was passiert in dir?",
+            "typ": "text",
+            "optionen": {
+                "Ich finde es schön, dass es dich so interessiert. Auch wenn ich nur die Hälfte verstehe, höre ich dir gerne zu, weil du dich darüber freust": "Pop-Punk",
+                "Ich versuche wirklich etwas zu verstehen. Ich stelle Rückfragen und will wissen, worum es genau geht bzw. warum es dich so interessiert": "Electro",
+                "Ich lächel leicht und führe mit dir eine Konversation darüber, aber eigentlich interessiert mich das Abendessen gerade mehr": "Comedy"
+            }
+        },
+        {
+            "frage": "14. Über wen kannst du am meisten lachen?",
+            "typ": "bilder",
+            "optionen": [
+                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Calvin & Marvin Kleinen"},
+                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Björn von Morgenstern"},
+                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Peter Rütten"}
+            ]
+        },
+        {
+            "frage": "15. Welches dieser Artworks gefällt dir am besten?",
+            "typ": "bilder",
+            "optionen": [
+                {"bild": "pikachuKarnimani.png", "eigenschaft": "Electro", "label": "Schiggy"},
+                {"bild": "entonGengar.png", "eigenschaft": "Comedy", "label": "Bisasam"},
+                {"bild": "pummeluffDitto.png", "eigenschaft": "Pop-Punk", "label": "Glumanda"}
+            ]
         },
     ]
 
