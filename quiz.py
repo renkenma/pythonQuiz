@@ -241,6 +241,7 @@ else:
                 st.markdown("### Dein Geschenk? Ha! So einfach mach ich es dir doch nicht. Unten findest du einen Button, der dich zur nächsten Aufgabe leitet!")
                 st.info("Solltest du Interesse daran haben zu erfahren, was sich hinter den anderen Geschenken verbirgt, halte ich dich nicht davon ab dieses Quiz erneut zu spielen 😊! Vielleicht ist dein Charakter ja doch anders als in diesem Durchlauf 🤫.")
                 st.balloons()
+                st.link_button("🎯 Zur nächsten Aufgabe →", "https://antwort1-fhpfryj2ylr4oh5embmbwy.streamlit.app/", use_container_width=True)
 
             elif sieger == "Electro":
                 st.bar_chart(df, color=["#ff4b4b"])
