@@ -45,7 +45,7 @@ if not st.session_state.quiz_started:
 # 2. QUIZ-BEREICH (Nach dem Klick)
 # ==========================================
 else:
-    st.title("Schauen wir, was bei diesem kleinen Persönlichkeitstest rumkommt!")
+    st.title("Schauen wir, was bei diesem kleinen Persönlichkeitstest rauskommt!")
 
     # --- DIAGRAMM ZEICHNEN ---
     df = pd.DataFrame({
