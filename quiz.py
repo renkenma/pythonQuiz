@@ -57,7 +57,7 @@ else:
         ]
     }).set_index("Kategorie")
 
-    st.bar_chart(df, color=["#ff4b4b"])
+    #st.bar_chart(df, color=["#ff4b4b"])
     st.divider()
 
     # --- FRAGENKATALOG ---
@@ -238,18 +238,21 @@ else:
             st.success(f"Dein Ergebnis ist: {sieger}")
 
             if sieger == "Pop-Punk":
+                st.bar_chart(df, color=["#ff4b4b"])
                 st.markdown("### 🎸 Dein Ticket: Call it Off!")
                 st.info("Du brauchst Gitarren, Energie und große Gefühle! Dein Geschenk ist ein Ticket für **Call it Off** – mach dich bereit, Pop-Punk und Taylor Swift Covers lauthals mitzusingen!")
                 st.info("Solltest du Interesse daran haben zu erfahren, was sich hinter den anderen Geschenken verbirgt, halte ich dich nicht davon ab dieses Quiz erneut zu spielen 😊! Vielleicht ist dein Charakter ja doch anders als in diesem Durchlauf 🤫.")
                 st.balloons()
 
             elif sieger == "Electro":
+                st.bar_chart(df, color=["#ff4b4b"])
                 st.markdown("### 🏖️ Dein Ticket: Strandfieber Festival!")
                 st.warning("Du willst treibende Beats und Festival-Vibes! Dein Geschenk ist ein Ticket für das **Strandfieber Festival** – pack die Tanzschuhe und die Sonnenbrille ein!")
                 st.warning("Solltest du Interesse daran haben zu erfahren, was sich hinter den anderen Geschenken verbirgt, halte ich dich nicht davon ab dieses Quiz erneut zu spielen 😊! Vielleicht ist dein Charakter ja doch anders als in diesem Durchlauf 🤫.")
                 st.balloons()
 
             else:
+                st.bar_chart(df, color=["#ff4b4b"])
                 st.markdown("### 😂 Dein Ticket: 3. Komische Nacht in Oldenburg!")
                 st.success("Du liebst gute Unterhaltung und Humor! Dein Geschenk ist ein Ticket für die **3. Komische Nacht in Oldenburg** – ein genialer Comedy-Abend mit Lachkrampf-Garantie.")
                 st.success("Solltest du Interesse daran haben zu erfahren, was sich hinter den anderen Geschenken verbirgt, halte ich dich nicht davon ab dieses Quiz erneut zu spielen 😊! Vielleicht ist dein Charakter ja doch anders als in diesem Durchlauf 🤫.")
