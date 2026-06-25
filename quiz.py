@@ -177,55 +177,19 @@ else:
                     st.rerun()
 
     # --- ERGEBNIS-ANZEIGE ---
-    # else:
-    #     st.success("🎉 Du hast alle Fragen beantwortet!")
-
-    #     # Scores sortieren, um die höchsten Werte zu vergleichen
-    #     sorted_scores = sorted(st.session_state.scores.values(), reverse=True)
-        
-    #     # Prüfung: Sind die beiden höchsten Werte gleich?
-    #     # sorted_scores[0] ist der erste, sorted_scores[1] der zweite
-    #     if sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
-    #         st.warning("Oh, ein Kopf-an-Kopf-Rennen! Du bist eine Mischung aus zwei Typen.")
-    #         # Hier kannst du definieren, was genau bei einem Unentschieden passieren soll
-    #     else:
-    #         # Dein bisheriger Code für einen eindeutigen Sieger
-    #         sieger = max(st.session_state.scores, key=st.session_state.scores.get)
-    #         st.success(f"Dein Ergebnis ist: {sieger}")
-    # --- ERGEBNIS-ANZEIGE ---
     else:
         st.success("🎉 Du hast alle Fragen beantwortet!")
-    
-        # 1. Wir brauchen die aktuellen Top-Kategorien (die beiden mit dem Unentschieden)
-        sorted_items = sorted(st.session_state.scores.items(), key=lambda item: item[1], reverse=True)
-        top1, val1 = sorted_items[0]
-        top2, val2 = sorted_items[1]
-        unterlegener, val3 = sorted_items[2] # Der Typ, der nicht gewonnen hat
-    
-        # Prüfung: Sind die beiden höchsten Werte gleich UND der Dritte kleiner?
-        if val1 == val2 and val1 > val3:
-            st.warning(f"Kopf-an-Kopf-Rennen zwischen {top1} und {top2}!")
-            
-            # Nur Fragen zur Auswahl stellen, bei denen sie damals für top1 oder top2 gestimmt hat
-            # Wir filtern die Historie nach den beiden Gewinnern
-            relevante_fragen_indices = [i for i, typ in enumerate(st.session_state.antworten_historie) 
-                                        if typ == top1 or typ == top2]
-    
-            # Die Auswahl-Logik
-            wahl = st.selectbox(
-                "Welche dieser Fragen war für dich am wichtigsten? (Wir zählen sie doppelt!)",
-                options=relevante_fragen_indices,
-                format_func=lambda i: f"Frage {i+1}"
-            )
-    
-            if st.button("Ergebnis finalisieren"):
-                # Gewichtung erhöhen: Der Typ, den sie bei dieser Frage gewählt hat, bekommt +1
-                gewaehlter_typ = st.session_state.antworten_historie[wahl]
-                st.session_state.scores[gewaehlter_typ] += 1
-                st.rerun() # Seite neu laden, damit der if-Block nicht mehr greift
-                
+
+        # Scores sortieren, um die höchsten Werte zu vergleichen
+        sorted_scores = sorted(st.session_state.scores.values(), reverse=True)
+        
+        # Prüfung: Sind die beiden höchsten Werte gleich?
+        # sorted_scores[0] ist der erste, sorted_scores[1] der zweite
+        if sorted_scores[0] == sorted_scores[1] and sorted_scores[0] > sorted_scores[2]:
+            st.warning("Oh, ein Kopf-an-Kopf-Rennen! Du bist eine Mischung aus zwei Typen.")
+            # Hier kannst du definieren, was genau bei einem Unentschieden passieren soll
         else:
-            # Eindeutiger Sieger
+            # Dein bisheriger Code für einen eindeutigen Sieger
             sieger = max(st.session_state.scores, key=st.session_state.scores.get)
             st.success(f"Dein Ergebnis ist: {sieger}")
         
