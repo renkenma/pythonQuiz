@@ -49,7 +49,7 @@ else:
 
     # --- DIAGRAMM ZEICHNEN ---
     df = pd.DataFrame({
-        "Kategorie": ["🎸 Pop-Punk", "⚡ Electro", "😂 Comedy"],
+        "Kategorie": ["1", "2", "3"],
         "Punkte": [
             st.session_state.scores["Pop-Punk"],
             st.session_state.scores["Electro"],
