@@ -248,12 +248,14 @@ else:
                 st.markdown("### Dein Geschenk? Ha! So einfach mach ich es dir doch nicht. Unten findest du einen Button, der dich zur nächsten Aufgabe leitet!")
                 st.warning("Solltest du Interesse daran haben zu erfahren, was sich hinter den anderen Geschenken verbirgt, halte ich dich nicht davon ab dieses Quiz erneut zu spielen 😊! Vielleicht ist dein Charakter ja doch anders als in diesem Durchlauf 🤫.")
                 st.balloons()
+                st.link_button("🎯 Zur nächsten Aufgabe →", "https://antwort3-k2ucugobeemgmd3tvdye2k.streamlit.app/", use_container_width=True)
 
             else:
                 st.bar_chart(df, color=["#ff4b4b"])
                 st.markdown("### Dein Geschenk? Ha! So einfach mach ich es dir doch nicht. Unten findest du einen Button, der dich zur nächsten Aufgabe leitet!")
                 st.success("Solltest du Interesse daran haben zu erfahren, was sich hinter den anderen Geschenken verbirgt, halte ich dich nicht davon ab dieses Quiz erneut zu spielen 😊! Vielleicht ist dein Charakter ja doch anders als in diesem Durchlauf 🤫.")
                 st.balloons()
+                st.link_button("🎯 Zur nächsten Aufgabe →", "https://antwort2-63jgbcnhrbpzffb56ggc4c.streamlit.app/", use_container_width=True)
 
             st.divider()
             if st.button("🔄 Quiz neu starten"):
