@@ -423,8 +423,13 @@ else:
             top_wert = sorted_scores[0]
             tie_kategorien = [k for k, v in st.session_state.scores.items() if v == top_wert]
 
+            # WICHTIG: tie_break_runde nur erhöhen, wenn wir NEU in den
+            # Tie-Break-Modus wechseln (nicht bei jedem Rerun während wir
+            # schon drin sind) - sonst ändern sich die Button-Keys zwischen
+            # Klick und Auswertung und der Klick geht "verloren".
+            if not st.session_state.tie_break_active:
+                st.session_state.tie_break_runde += 1
             st.session_state.tie_break_active = True
-            st.session_state.tie_break_runde += 1
 
             st.warning(f"🤔 Kopf-an-Kopf-Rennen zwischen: **{', '.join(tie_kategorien)}**!")
             st.subheader("Welche dieser Fragen war für dich am wichtigsten / hat dich am meisten du selbst gezeigt?")
