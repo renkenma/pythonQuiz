@@ -2,160 +2,149 @@ import streamlit as st
 import pandas as pd
 
 # Seiten-Setup
-st.set_page_config(page_title="Charakter-Quiz", page_icon="🎁", layout="centered")
+st.set_page_config(page_title="Geschenke-Quiz", page_icon="🎟️", layout="centered")
 
 # --- SESSION STATE INITIALISIEREN ---
-# Wir speichern die aktuelle Frage und die Punkte dauerhaft für diese Sitzung
 if 'aktuelle_frage' not in st.session_state:
     st.session_state.aktuelle_frage = 0
-    st.session_state.scores = {"Entspannung": 0, "Action": 0, "Neugier": 0}
+    st.session_state.scores = {"Pop-Punk": 0, "Electro": 0, "Comedy": 0}
 
-st.title("🎁 Welches Geschenk passt zu dir?")
+st.title("🎟️ Wohin geht der nächste Ausflug?")
+st.write("Finde heraus, welches Event am besten zu dir passt. Deine Antworten füllen die Säulen live auf!")
 
 # --- DIAGRAMM ZEICHNEN ---
-# Das Diagramm wird immer aus dem aktuellen Session-State generiert
 df = pd.DataFrame({
-    "Kategorie": ["Entspannung", "Action", "Neugier"],
+    "Kategorie": ["🎸 Pop-Punk & Vocals", "⚡ Beats & Bass", "😂 Humor & Lachen"],
     "Punkte": [
-        st.session_state.scores["Entspannung"], 
-        st.session_state.scores["Action"], 
-        st.session_state.scores["Neugier"]
+        st.session_state.scores["Pop-Punk"], 
+        st.session_state.scores["Electro"], 
+        st.session_state.scores["Comedy"]
     ]
 }).set_index("Kategorie")
 
 # Säulendiagramm anzeigen
-st.bar_chart(df, color=["#1f77b4"])
+st.bar_chart(df, color=["#ff4b4b"])
 st.divider()
 
 # --- FRAGENKATALOG ---
 fragen = [
     {
-        "frage": "1. Wie verbringst du dein perfektes Wochenende?",
+        "frage": "1. Was ist dir auf einem Event am wichtigsten?",
         "optionen": {
-            "Auf der Couch mit einer gemütlichen Serie": "Entspannung",
-            "Mit Mountainbiken oder Bouldern": "Action",
-            "Ich besuche ein Museum oder lerne ein neues Hobby": "Neugier"
+            "Die Texte kennen und laut mitsingen können!": "Pop-Punk",
+            "Ein fetter Bass und tanzen, bis die Füße wehtun.": "Electro",
+            "Zurücklehnen, gut unterhalten werden und Tränen lachen.": "Comedy"
         }
     },
     {
-        "frage": "2. Du gewinnst eine Reise! Wohin geht's?",
+        "frage": "2. Dein perfektes Outfit fürs Ausgehen besteht aus...",
         "optionen": {
-            "All-Inclusive Strandurlaub auf den Malediven": "Entspannung",
-            "Wildwasser-Rafting und Dschungeltour in Costa Rica": "Action",
-            "Eine Expedition zu den alten Ruinen von Machu Picchu": "Neugier"
+            "...Bandshirt, Jeans und Chucks (oder Doc Martens).": "Pop-Punk",
+            "...Glitzer, bunten Farben und dem perfekten Festival-Look.": "Electro",
+            "...etwas Bequemem, aber Schickem. Hauptsache man kann gut sitzen.": "Comedy"
         }
     },
     {
-        "frage": "3. Du entdeckst eine geheimnisvolle, alte Tür im Wald. Was tust du?",
+        "frage": "3. Was läuft auf dem Roadtrip dorthin im Radio?",
         "optionen": {
-            "Ich gehe weiter, ist mir zu anstrengend heute.": "Entspannung",
-            "Ich trete sie ein und schaue, was mich erwartet!": "Action",
-            "Ich untersuche das Schloss und suche nach Hinweisen.": "Neugier"
+            "Gitarren-Riffs und melancholische, aber laute Refrains.": "Pop-Punk",
+            "Ein treibendes Set mit ordentlich BPM.": "Electro",
+            "Ich höre lieber einen unterhaltsamen Podcast.": "Comedy"
         }
     },
     {
-        "frage": "4. Welches Film-Genre wählst du für den Kinoabend?",
+        "frage": "4. Welches Getränk hast du an einem perfekten Abend in der Hand?",
         "optionen": {
-            "Eine schöne Feel-Good-Komödie": "Entspannung",
-            "Einen lauten, schnellen Blockbuster": "Action",
-            "Einen kniffligen Sci-Fi- oder Mystery-Thriller": "Neugier"
+            "Ein kühles Bierchen beim Pogen in der Menge.": "Pop-Punk",
+            "Einen bunten Cocktail oder Energy-Drink für die Ausdauer.": "Electro",
+            "Ein Glas Wein oder ein gezapftes Bier gemütlich am Tisch.": "Comedy"
         }
     },
     {
-        "frage": "5. Ein freier Nachmittag, aber es regnet in Strömen:",
+        "frage": "5. Was ist deine heimliche Superkraft?",
         "optionen": {
-            "Perfekt! Zeit für Tee, Decke und Musik.": "Entspannung",
-            "Ich fahre in die Indoor-Kletterhalle oder ins Spaßbad.": "Action",
-            "Ich verliere mich in einem Wikipedia-Rabbit-Hole.": "Neugier"
+            "Ich kenne alle Eras von Taylor Swift auswendig.": "Pop-Punk",
+            "Ich kann 12 Stunden am Stück raven.": "Electro",
+            "Ich habe für jede Situation den perfekten dummen Spruch.": "Comedy"
         }
     },
     {
-        "frage": "6. Auf einer großen Party findet man dich am ehesten...",
+        "frage": "6. Wie sieht die ideale Location für dich aus?",
         "optionen": {
-            "...gemütlich auf dem Sofa in der Ecke.": "Entspannung",
-            "...mitten auf der Tanzfläche!": "Action",
-            "...in der Küche bei tiefgründigen Diskussionen.": "Neugier"
+            "Ein schwitziger Club oder ein cooler Konzertsaal.": "Pop-Punk",
+            "Open-Air mit Lasershow, Sand oder Wiese unter den Füßen.": "Electro",
+            "Ein uriges Theater, ein Café oder eine kleine Bühne.": "Comedy"
         }
     },
     {
-        "frage": "7. Du bekommst 500 Euro, musst sie aber sofort ausgeben für:",
+        "frage": "7. Was machst du, wenn jemand auf der Bühne einen Fehler macht?",
         "optionen": {
-            "Ein luxuriöses Wellness-Wochenende.": "Entspannung",
-            "Einen Tandem-Fallschirmsprung.": "Action",
-            "Ein hochwertiges Teleskop oder Mikroskop.": "Neugier"
+            "Egal, das macht es erst authentisch!": "Pop-Punk",
+            "Fällt beim nächsten Bass-Drop eh nicht auf.": "Electro",
+            "Ich hoffe, da kommt direkt ein spontaner Witz drüber!": "Comedy"
         }
     },
     {
-        "frage": "8. Welches dieser Tiere ist dein 'Spirit Animal'?",
+        "frage": "8. Wie beendest du einen legendären Abend?",
         "optionen": {
-            "Das Faultier (Meister des Chillens)": "Entspannung",
-            "Der Gepard (Schnell und energiegeladen)": "Action",
-            "Die Eule (Weise und beobachtend)": "Neugier"
+            "Heiser vom vielen Schreien und Singen auf dem Heimweg.": "Pop-Punk",
+            "Den Sonnenaufgang beobachten, weil die Party noch lief.": "Electro",
+            "Mit Bauchmuskelkater vom Lachen ins Bett fallen.": "Comedy"
         }
     },
     {
-        "frage": "9. Welches Fortbewegungsmittel wählst du?",
+        "frage": "9. Wofür gibst du vor Ort am ehesten Geld aus?",
         "optionen": {
-            "Einen bequemen Zug mit Schlafwagen": "Entspannung",
-            "Ein schnelles Motorrad oder einen Jetski": "Action",
-            "Ein Forschungs-U-Boot": "Neugier"
+            "Merch! Ich brauche ein Shirt zur Erinnerung.": "Pop-Punk",
+            "Für Foodtrucks und leuchtende Accessoires.": "Electro",
+            "Für Snacks und Nachschub an guten Drinks am Platz.": "Comedy"
         }
     },
     {
-        "frage": "10. Was ist dein Lebensmotto?",
+        "frage": "10. Welches Emoji nutzt du am meisten?",
         "optionen": {
-            "In der Ruhe liegt die Kraft.": "Entspannung",
-            "No risk, no fun!": "Action",
-            "Man lernt niemals aus.": "Neugier"
+            "🎸 oder 💔": "Pop-Punk",
+            "⚡ oder 🕺": "Electro",
+            "😂 oder 🎤": "Comedy"
         }
     }
 ]
 
 # --- LOGIK FÜR FRAGEN & AUSWERTUNG ---
 
-# Prüfen, ob noch Fragen übrig sind
 if st.session_state.aktuelle_frage < len(fragen):
-    # Aktuelle Frage holen
     q = fragen[st.session_state.aktuelle_frage]
     
     st.subheader(q["frage"])
     
-    # Für jede Antwortmöglichkeit einen Button erstellen
     for antwort_text, eigenschaft in q["optionen"].items():
-        # Wenn der Button geklickt wird:
         if st.button(antwort_text, use_container_width=True):
-            # 1. Punkt zur jeweiligen Eigenschaft addieren
             st.session_state.scores[eigenschaft] += 1
-            # 2. Zur nächsten Frage springen
             st.session_state.aktuelle_frage += 1
-            # 3. Seite sofort neu laden, um Änderung anzuzeigen
             st.rerun()
 
 else:
-    # Alle Fragen wurden beantwortet -> Auswertung!
     st.success("🎉 Du hast alle Fragen beantwortet! Hier ist dein Ergebnis:")
     
-    # Finde die Eigenschaft mit den meisten Punkten im Session State
     sieger = max(st.session_state.scores, key=st.session_state.scores.get)
     
-    if sieger == "Entspannung":
-        st.markdown("### 💆‍♀️ Dein Geschenk: Das Spa-Paket!")
-        st.info("Du liebst die Ruhe! Du bekommst eine flauschige Decke, Premium-Badebomben, Duftkerzen und einen Gutschein für eine Massage.")
+    if sieger == "Pop-Punk":
+        st.markdown("### 🎸 Dein Ticket: Call it Off!")
+        st.info("Du brauchst Gitarren, Energie und große Gefühle! Dein Geschenk ist ein Ticket für **Call it Off** – mach dich bereit, Pop-Punk und Taylor Swift Covers lauthals mitzusingen!")
         st.balloons()
         
-    elif sieger == "Action":
-        st.markdown("### 🪂 Dein Geschenk: Das Adrenalin-Paket!")
-        st.error("Du brauchst Nervenkitzel! Dein Geschenk ist ein Gutschein für einen Bungee-Sprung (oder Lasertag) und eine GoPro für deine nächsten Abenteuer.")
-        st.snow()
+    elif sieger == "Electro":
+        st.markdown("### 🏖️ Dein Ticket: Strandfieber Festival!")
+        st.warning("Du willst treibende Beats und Festival-Vibes! Dein Geschenk ist ein Ticket für das **Strandfieber Festival** – pack die Tanzschuhe und die Sonnenbrille ein!")
+        st.snow() # Lässt Konfetti/Schnee regnen, perfekt für Festivals
         
     else:
-        st.markdown("### 🕵️‍♂️ Dein Geschenk: Das Entdecker-Paket!")
-        st.warning("Dein Kopf braucht Futter! Du bekommst ein geniales Escape-Room-Brettspiel, ein kniffliges 3D-Puzzle und ein Ticket für ein interaktives Museum.")
+        st.markdown("### 😂 Dein Ticket: 3. Komische Nacht in Oldenburg!")
+        st.success("Du liebst gute Unterhaltung und Humor! Dein Geschenk ist ein Ticket für die **3. Komische Nacht in Oldenburg** – ein genialer Comedy-Abend mit Lachkrampf-Garantie.")
         st.balloons()
     
     st.divider()
     
-    # Optional: Ein Button, um das Quiz neu zu starten
     if st.button("🔄 Quiz neu starten"):
         st.session_state.clear()
         st.rerun()
