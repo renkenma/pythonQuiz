@@ -22,7 +22,7 @@ if 'quiz_started' not in st.session_state:
 # 1. STARTSEITE (Vor dem Klick)
 # ==========================================
 if not st.session_state.quiz_started:
-    st.title("🎁 Alles Gute zum Geburtstag!")
+    st.title("🎁 Alles Gute zum Geburtstag!111")
 
     st.markdown("""
     **Hey mein Schatz** 😊 Ich wünsche dir zum Geburtstag nur das Beste der Welt und dass all' deine Wünsche in Erfüllung gehen! 😊 Bei einigen dieser Wünsche spiele ich hoffentlich die Hauptrolle ❤️. 
