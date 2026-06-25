@@ -65,12 +65,12 @@ else:
             ]
         },
         {
-            "frage": "2. Stell dir vor, du dürftest ab heute nur noch eine einzige Art von Serie bingen. Wofür entscheidest du dich?",
+            "frage": "2. Stell dir vor, du dürftest ab heute nur noch eine einzige Art von Serie gucken. Wofür entscheidest du dich?",
             "typ": "text",
             "optionen": {
-                "Sitcoms wie 'Friends' oder 'The Office' – Spaß & Mitgefühl": "Pop-Punk",
-                "Action-Game-Shows wie die 'Beast Games' oder 'Crash Games' – Energie & Spannung": "Electro",
-                "Trash-TV wie 'Temptation Island' & 'Are you the one?' – Humor & Absurdität": "Comedy"
+                "Sitcoms wie 'Friends' oder 'The Office'": "Pop-Punk",
+                "Action-Game-Shows wie die 'Beast Games' oder 'Crash Games'": "Electro",
+                "Trash-TV wie 'Temptation Island' & 'Are you the one?'": "Comedy"
             }
         },
         {
@@ -83,10 +83,10 @@ else:
             }
         },
         {
-            "frage": "4. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Wie reagierst du?",
+            "frage": "4. Stell dir vor, wir irren bei 35 Grad durch eine fremde Stadt, suchen ewig nach etwas Bestimmten und nichts läuft nach Plan. Was passiert?",
             "typ": "text",
             "optionen": {
-                "Ich atme tief durch, nehme deine Hand und wir versuchen, uns gegenseitig zu beruhigen und das Beste daraus zu machen.": "Pop-Punk",
+                "Einer von uns atmet tief durch, nimmt den anderen bei der Hand und es wird versucht, uns gegenseitig zu beruhigen und das Beste daraus zu machen.": "Pop-Punk",
                 "Augen zu und durch! Die Hitze wird ignoriert, die Energie oben gehalten und es wird zielstrebig weitergelaufen, bis wir da sind.": "Electro",
                 "Ich bin erst super gestresst, aber spätestens am Abend im Hotel lachen wir uns über dieses komplette Chaos einfach nur kaputt.": "Comedy"
             }
@@ -108,7 +108,43 @@ else:
                 "Am liebsten an den See und am noch liebsten davor noch eine Runde wandern": "Electro",
                 "Abwechselnd einen spannenden Krimi lesen und Nintendogs spielen": "Comedy"
             }
-        }
+        },
+        {
+            "frage": "7. Wenn wir uns in ein Krimi-Ermittler-Duo verwandeln könnten – welches wären wir?",
+            "typ": "text",
+            "optionen": {
+                "Erica Falck & Patrik Hedström (Läckberg)": "Pop-Punk",
+                "Pia Sander & Oliver von Bodenstein (Neuhaus)": "Electro",
+                "Ann Kathrin Klaasen & Frank Weller (Wolf)": "Comedy"
+            }
+        },
+        {
+            "frage": "8. Was bedeutet dir deine Heimat in Dorum mit einem - damalig noch in Betrieb laufenden - Bauernhof mit der Nähe zur Küste für dich?",
+            "typ": "text",
+            "optionen": {
+                "Meine Familie ist das, was es zu meiner Heimat macht. Die Nähe zur Nordsee und der Bauernhof sind das i-Tüpfelchen oben drauf": "Pop-Punk",
+                "Die frische Luft tut mir gut. Neben einem guten Buch auf der Terasse bin ich auch gerne hier an der frischen Luft und am Meer": "Electro",
+                "Es ist mein Ort für Ruhe und Entspannung. Ich mag es, wenn man die Dinge einfach mal langsamer angeht und sich nicht von der Hektik treiben lässt": "Comedy"
+            }
+        },
+        {
+            "frage": "9. Ganz ehrlich: Was schätzt du an mir am meisten?",
+            "typ": "text",
+            "optionen": {
+                "Dass ich mich so schnell und leidenschaftlich für neue Dinge begeistern kann": "Pop-Punk",
+                "Mein Nerd-Wissen über Pokémon und Yu-Gi-Oh!": "Electro",
+                "Dass wir in fast jeder Situation gemeinsam Spaß haben können": "Comedy"
+            }
+        },
+        {
+            "frage": "10. Wir verkaufen was bei Kleinanzeigen. Jemand nervt total – wie reagierst du?",
+            "typ": "text",
+            "optionen": {
+                "Ich versuche das Gute in dieser Person zu sehen und versuche freundlich ein vernünftiges Gespräch zu führen": "Pop-Punk",
+                "Ich bin etwas angefresse und überlege, ob ich gar nicht antworte oder dieser Person die Leviten lese": "Electro",
+                "Ich antworte selbst in einem lustig-frechen Ton und mache mir einen Spaß daraus": "Comedy"
+            }
+        },
     ]
 
     # --- LOGIK FÜR FRAGEN & AUSWERTUNG ---
