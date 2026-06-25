@@ -20,12 +20,22 @@ if not st.session_state.quiz_started:
     st.markdown("""
     **Hey mein Schatz** 😊 Ich wünsche dir zum Geburtstag nur das Beste der Welt und dass all' deine Wünsche in Erfüllung gehen! 😊 Bei einigen dieser Wünsche spiele ich hoffentlich die Hauptrolle ❤️. 
     
-    Ich will dir natürlich soviel bieten wie möglich! Allerdings haben wir uns ein Limit bei den Geschenken gesetzt. Daher kann ich dich nicht zu allem einladen, woran ich so gedacht habe 😔. Daher reduziert sich der Spaß auf ein Drittel. Aber ich will ja auch nicht, dass du nach Lust und Laune entscheidest! 
+    Ich will dir natürlich soviel bieten wie möglich! Allerdings haben wir uns ein Limit bei den Geschenken gesetzt. Daher kann ich dich nicht zu allem einladen, woran ich so gedacht habe 😔. Daher reduziert sich der Spaß auf ein Drittel. Aber ∞/3 ist auch nicht gerade wenig! Aber ich will ja auch nicht, dass du nach Lust und Laune entscheidest! 
     
     Wie wäre es, wenn wir das machen, was am besten zu dir passt? Dir werden hier keine expliziten Erlebnisse vorgeschlagen. Stattdessen habe ich ein kleines Quiz für dich organisiert, das deinen Charakter prüft. 
     
     Nimm es mit einer Prise Humor und vielleicht kommst du ja anhand der Fragen schon darauf, was für Ideen ich im Hintergrund für dich geplant habe. Und nun: Klick den Button und viel Spaß bei deinem Quiz! 😊
     """)
+
+    st.markdown("""
+    **Hey mein Schatz** 😊 Ich wünsche dir zum Geburtstag nur das Beste der Welt und dass all' deine Wünsche in Erfüllung gehen! 😊 Bei einigen dieser Wünsche spiele ich hoffentlich die Hauptrolle ❤️. 
+    
+    Ich will dir natürlich soviel bieten wie möglich! Allerdings haben wir uns ein Limit bei den Geschenken gesetzt. Daher kann ich dich nicht zu allem einladen, woran ich so gedacht habe 😔. Aber <span style="display:inline-block; text-align:center; vertical-align:middle; line-height:1;"><span style="display:block; border-bottom:1px solid currentColor; padding:0 2px;">∞</span><span style="display:block;">3</span></span> ist auch nicht gerade wenig! Aber ich will ja auch nicht, dass du nach Lust und Laune entscheidest und diese Entscheidung am Ende bereust! 
+    
+    Wie wäre es, wenn wir das machen, was am besten zu dir passt? Dir werden hier keine expliziten Erlebnisse vorgeschlagen. Stattdessen habe ich ein kleines Quiz für dich organisiert, das deinen Charakter prüft. 
+    
+    Nimm es mit einer Prise Humor und vielleicht kommst du ja anhand der Fragen schon darauf, was für Ideen ich im Hintergrund für dich geplant habe. Und nun: Klick den Button und viel Spaß bei deinem Quiz! 😊
+    """, unsafe_allow_html=True)
     
     st.divider()
     
